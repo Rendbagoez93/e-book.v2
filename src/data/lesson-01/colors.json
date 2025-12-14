@@ -1,0 +1,54 @@
+{
+  "colors": [
+    {
+      "name": "Red",
+      "hex": "#FF0000",
+      "pronunciation": "rɛd"
+    },
+    {
+      "name": "Blue",
+      "hex": "#0000FF",
+      "pronunciation": "bluː"
+    },
+    {
+      "name": "Green",
+      "hex": "#008000",
+      "pronunciation": "ɡriːn"
+    },
+    {
+      "name": "Yellow",
+      "hex": "#FFFF00",
+      "pronunciation": "ˈjɛloʊ"
+    },
+    {
+      "name": "Orange",
+      "hex": "#FFA500",
+      "pronunciation": "ˈɔrɪndʒ"
+    },
+    {
+      "name": "Purple",
+      "hex": "#800080",
+      "pronunciation": "ˈpɜːrpl"
+    },
+    {
+      "name": "Pink",
+      "hex": "#FFC0CB",
+      "pronunciation": "pɪŋk"
+    },
+    {
+      "name": "Brown",
+      "hex": "#A52A2A",
+      "pronunciation": "braʊn"
+    },
+    {
+      "name": "Black",
+      "hex": "#000000",
+      "pronunciation": "blæk"
+    },
+    {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "pronunciation": "waɪt"
+    }
+  ]
+}

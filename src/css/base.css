@@ -1,0 +1,400 @@
+/* ===========================
+   CSS Variables for Theming
+   =========================== */
+:root {
+    /* Background Colors */
+    --bg-primary: #7B68EE;        /* Purple background */
+    --bg-secondary: #FFB6C1;      /* Pink textbox */
+    --bg-nav: #8B4513;            /* Brown navigation */
+    --bg-grid: rgba(255, 255, 255, 0.1); /* Grid overlay */
+    
+    /* Text Colors */
+    --text-primary: #FFFFFF;
+    --text-secondary: #333333;
+    --text-accent: #FF6B6B;
+    
+    /* Interactive Elements */
+    --btn-primary: #FF6B6B;
+    --btn-hover: #FF5252;
+    
+    /* Spacing */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+    
+    /* Border Radius */
+    --radius-sm: 15px;
+    --radius-md: 25px;
+    --radius-lg: 35px;
+    
+    /* Shadows */
+    --shadow-card: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --shadow-nav: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================
+   Base Styles
+   =========================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+body {
+    background: var(--bg-primary);
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Grid Pattern Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(var(--bg-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===========================
+   Typography
+   =========================== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* ===========================
+   Layout Components
+   =========================== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+}
+
+.content-card {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    box-shadow: var(--shadow-card);
+    position: relative;
+}
+
+/* Spiral Binding Effect */
+.content-card::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 20px,
+        rgba(0, 0, 0, 0.3) 20px,
+        rgba(0, 0, 0, 0.3) 30px
+    );
+}
+
+/* ===========================
+   Header Styles
+   =========================== */
+header {
+    background: linear-gradient(135deg, #2D3561 0%, #4A5899 100%);
+    color: var(--text-primary);
+    padding: var(--spacing-md);
+    text-align: center;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    box-shadow: var(--shadow-nav);
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    color: var(--text-primary);
+    margin: 0;
+}
+
+header .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===========================
+   Navigation Styles
+   =========================== */
+nav {
+    background: var(--bg-nav);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-nav);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 9;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-md);
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+}
+
+/* ===========================
+   Footer Styles
+   =========================== */
+footer {
+    background: linear-gradient(135deg, #2D3561 0%, #4A5899 100%);
+    color: var(--text-primary);
+    text-align: center;
+    padding: var(--spacing-md);
+    margin-top: auto;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    position: relative;
+    z-index: 10;
+}
+
+footer p {
+    color: var(--text-primary);
+    margin: 0;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+footer nav li {
+    margin: 0;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+.button, .btn {
+    background-color: var(--btn-primary);
+    color: var(--text-primary);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover, .btn:hover {
+    background-color: var(--btn-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================
+   Page Navigation
+   =========================== */
+.page-nav {
+    position: fixed;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    background: white;
+    padding: 12px 20px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    font-weight: 700;
+    z-index: 100;
+}
+
+/* ===========================
+   Cards & Components
+   =========================== */
+.card {
+    background: white;
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+}
+
+.grid-item {
+    background: white;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-swatch {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-sm);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.color-swatch:hover {
+    transform: scale(1.1);
+}
+
+.color-swatch h3 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .content-card {
+        padding: var(--spacing-md);
+    }
+    
+    .content-card::before {
+        display: none;
+    }
+    
+    .page-nav {
+        bottom: var(--spacing-sm);
+        right: var(--spacing-sm);
+    }
+}
+
+/* ===========================
+   Utility Classes
+   =========================== */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 { margin-top: var(--spacing-sm); }
+.mt-2 { margin-top: var(--spacing-md); }
+.mt-3 { margin-top: var(--spacing-lg); }
+
+.mb-1 { margin-bottom: var(--spacing-sm); }
+.mb-2 { margin-bottom: var(--spacing-md); }
+.mb-3 { margin-bottom: var(--spacing-lg); }
+
+.p-1 { padding: var(--spacing-sm); }
+.p-2 { padding: var(--spacing-md); }
+.p-3 { padding: var(--spacing-lg); }

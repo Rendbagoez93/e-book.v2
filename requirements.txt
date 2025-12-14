@@ -1,0 +1,5 @@
+Flask
+gtts
+flask-cors
+pytest
+alpinejs

@@ -1,0 +1,54 @@
+{
+  "numbers": [
+    {
+      "number": 1,
+      "name": "one",
+      "pronunciation": "/wʌn/"
+    },
+    {
+      "number": 2,
+      "name": "two",
+      "pronunciation": "/tuː/"
+    },
+    {
+      "number": 3,
+      "name": "three",
+      "pronunciation": "/θriː/"
+    },
+    {
+      "number": 4,
+      "name": "four",
+      "pronunciation": "/fɔːr/"
+    },
+    {
+      "number": 5,
+      "name": "five",
+      "pronunciation": "/faɪv/"
+    },
+    {
+      "number": 6,
+      "name": "six",
+      "pronunciation": "/sɪks/"
+    },
+    {
+      "number": 7,
+      "name": "seven",
+      "pronunciation": "/ˈsɛv.ən/"
+    },
+    {
+      "number": 8,
+      "name": "eight",
+      "pronunciation": "/eɪt/"
+    },
+    {
+      "number": 9,
+      "name": "nine",
+      "pronunciation": "/naɪn/"
+    },
+    {
+      "number": 10,
+      "name": "ten",
+      "pronunciation": "/tɛn/"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 01: Letters, Numbers, and Colors</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="/js/alpine-init.js" defer></script>
+    <script src="/js/components/alphabet-cards.js" defer></script>
+    <script src="/js/components/number-grid.js" defer></script>
+    <script src="/js/components/color-picker.js" defer></script>
+</head>
+<body class="page-wrapper" x-data="{ currentLesson: 'lesson-01' }">
+    <header>
+        <div class="logo">
+            <span>📚</span>
+            <h1>BORCELLE - Lesson 01</h1>
+        </div>
+        <p>MY EDUCATION | ABOUT | CONTACT</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lessons/lesson-01.html">Lesson 1: Letters, Numbers & Colors</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <div class="content-card">
+            <h1 class="text-center">ENGLISH CLASS<br><span style="color: var(--text-accent);">BASIC LEARNING</span></h1>
+            
+            <p class="text-center mb-3">Beyond Human: Exploring the English Session with Good Mood</p>
+            
+            <!-- Alphabet Section -->
+            <section x-data="alphabetCards" class="mb-3">
+                <h2>📝 Letters of the Alphabet</h2>
+                <div class="grid">
+                    <template x-for="letter in letters" :key="letter.name">
+                        <div class="grid-item" @click="selectLetter(letter)">
+                            <h3 x-text="letter.name"></h3>
+                            <p x-text="letter.pronunciation"></p>
+                            <button class="btn" @click.stop="playAudio(letter.name)">🔊</button>
+                        </div>
+                    </template>
+                </div>
+            </section>
+            
+            <!-- Numbers Section -->
+            <section x-data="numberGrid" class="mb-3">
+                <h2>🔢 Numbers 1-10</h2>
+                <div class="grid">
+                    <template x-for="number in numbers" :key="number.number">
+                        <div class="grid-item">
+                            <h3 x-text="number.number"></h3>
+                            <p x-text="number.name"></p>
+                            <p x-text="number.pronunciation"></p>
+                            <button class="btn" @click="playAudio(number.name)">🔊</button>
+                        </div>
+                    </template>
+                </div>
+            </section>
+            
+            <!-- Colors Section -->
+            <section x-data="colorPicker" class="mb-3">
+                <h2>🎨 Colors</h2>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <template x-for="color in colors" :key="color.name">
+                        <div class="color-swatch" 
+                             :style="`background-color: ${color.hex}`"
+                             @click="selectColor(color)"
+                             :title="color.name">
+                            <h3 x-text="color.name"></h3>
+                        </div>
+                    </template>
+                </div>
+                <div x-show="selectedColor" class="mt-2 text-center">
+                    <p>Selected: <span x-text="selectedColor.name"></span></p>
+                    <button class="btn" x-show="selectedColor" @click="playAudio(selectedColor.name)">🔊 Play</button>
+                </div>
+            </section>
+        </div>
+        
+        <div class="page-nav">PAGE 03</div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 English A1 eBook by BORCELLE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

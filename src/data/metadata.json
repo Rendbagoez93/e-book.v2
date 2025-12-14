@@ -1,0 +1,22 @@
+{
+  "title": "English A1 eBook",
+  "author": "Your Name",
+  "version": "1.0",
+  "description": "An interactive eBook for teaching English at level A1, focusing on letters, numbers, and colors.",
+  "lessons": [
+    {
+      "id": "lesson-01",
+      "title": "Introduction to Letters, Numbers, and Colors",
+      "description": "This lesson introduces the basic letters of the alphabet, numbers, and colors.",
+      "content": {
+        "letters": "src/data/lesson-01/letters.json",
+        "numbers": "src/data/lesson-01/numbers.json",
+        "colors": "src/data/lesson-01/colors.json"
+      }
+    }
+  ],
+  "language": "English",
+  "level": "A1",
+  "date_created": "2023-10-01",
+  "last_updated": "2023-10-01"
+}

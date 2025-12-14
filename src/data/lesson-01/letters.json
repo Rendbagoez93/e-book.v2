@@ -1,0 +1,108 @@
+{
+  "letters": [
+    {
+      "name": "A",
+      "pronunciation": "/eɪ/"
+    },
+    {
+      "name": "B",
+      "pronunciation": "/biː/"
+    },
+    {
+      "name": "C",
+      "pronunciation": "/siː/"
+    },
+    {
+      "name": "D",
+      "pronunciation": "/diː/"
+    },
+    {
+      "name": "E",
+      "pronunciation": "/iː/"
+    },
+    {
+      "name": "F",
+      "pronunciation": "/ɛf/"
+    },
+    {
+      "name": "G",
+      "pronunciation": "/dʒiː/"
+    },
+    {
+      "name": "H",
+      "pronunciation": "/eɪtʃ/"
+    },
+    {
+      "name": "I",
+      "pronunciation": "/aɪ/"
+    },
+    {
+      "name": "J",
+      "pronunciation": "/dʒeɪ/"
+    },
+    {
+      "name": "K",
+      "pronunciation": "/keɪ/"
+    },
+    {
+      "name": "L",
+      "pronunciation": "/ɛl/"
+    },
+    {
+      "name": "M",
+      "pronunciation": "/ɛm/"
+    },
+    {
+      "name": "N",
+      "pronunciation": "/ɛn/"
+    },
+    {
+      "name": "O",
+      "pronunciation": "/oʊ/"
+    },
+    {
+      "name": "P",
+      "pronunciation": "/piː/"
+    },
+    {
+      "name": "Q",
+      "pronunciation": "/kjuː/"
+    },
+    {
+      "name": "R",
+      "pronunciation": "/ɑːr/"
+    },
+    {
+      "name": "S",
+      "pronunciation": "/ɛs/"
+    },
+    {
+      "name": "T",
+      "pronunciation": "/tiː/"
+    },
+    {
+      "name": "U",
+      "pronunciation": "/juː/"
+    },
+    {
+      "name": "V",
+      "pronunciation": "/viː/"
+    },
+    {
+      "name": "W",
+      "pronunciation": "/ˈdʌbəl.juː/"
+    },
+    {
+      "name": "X",
+      "pronunciation": "/ɛks/"
+    },
+    {
+      "name": "Y",
+      "pronunciation": "/waɪ/"
+    },
+    {
+      "name": "Z",
+      "pronunciation": "/ziː/"
+    }
+  ]
+}
