@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 01: Letters, Numbers, and Colors</title>
     <link rel="stylesheet" href="/css/base.css">
+    <!-- Load Alpine.js components BEFORE Alpine.js itself -->
+    <script src="/js/components/alphabet-cards.js"></script>
+    <script src="/js/components/number-grid.js"></script>
+    <script src="/js/components/color-picker.js"></script>
+    <script src="/js/alpine-init.js"></script>
+    <!-- Load Alpine.js last with defer -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script src="/js/alpine-init.js" defer></script>
-    <script src="/js/components/alphabet-cards.js" defer></script>
-    <script src="/js/components/number-grid.js" defer></script>
-    <script src="/js/components/color-picker.js" defer></script>
 </head>
 <body class="page-wrapper" x-data="{ currentLesson: 'lesson-01' }">
     <header>
@@ -35,15 +37,54 @@
             
             <!-- Alphabet Section -->
             <section x-data="alphabetCards" class="mb-3">
-                <h2>📝 Letters of the Alphabet</h2>
-                <div class="grid">
-                    <template x-for="letter in letters" :key="letter.name">
-                        <div class="grid-item" @click="selectLetter(letter)">
-                            <h3 x-text="letter.name"></h3>
-                            <p x-text="letter.pronunciation"></p>
-                            <button class="btn" @click.stop="playAudio(letter.name)">🔊</button>
+                <h2>📝 Letters of the Alphabet (A-Z)</h2>
+                
+                <!-- Loading State -->
+                <div x-show="loading" class="text-center p-3">
+                    <p>⏳ Loading letters...</p>
+                </div>
+                
+                <!-- Empty State -->
+                <div x-show="!loading && letters.length === 0" class="text-center p-3">
+                    <p>⚠️ No letters found. Please check console for errors.</p>
+                </div>
+                
+                <!-- Letters Grid -->
+                <div class="alphabet-grid" x-show="!loading && letters.length > 0">
+                    <template x-for="letter in letters" :key="letter.letter">
+                        <div class="alphabet-card" 
+                             @click="selectLetter(letter)"
+                             :class="{ 'selected': currentLetter && currentLetter.letter === letter.letter }">
+                            <div class="letter-display">
+                                <span class="letter-main" x-text="letter.letter"></span>
+                                <span class="letter-lowercase" x-text="letter.letter.toLowerCase()"></span>
+                            </div>
+                            <div class="letter-info">
+                                <p class="pronunciation" x-text="letter.pronunciation"></p>
+                                <p class="example-emoji" x-text="letter.exampleImage"></p>
+                                <p class="example-word" x-text="letter.exampleWord"></p>
+                            </div>
+                            <button class="btn-audio" @click.stop="playAudio(letter.letter)">🔊</button>
                         </div>
                     </template>
+                </div>
+                
+                <!-- Detailed Letter View -->
+                <div x-show="currentLetter" class="letter-detail-modal" @click="clearSelection()">
+                    <div class="letter-detail-content" @click.stop>
+                        <button class="close-btn" @click="clearSelection()">✕</button>
+                        <div class="detail-letter" x-text="currentLetter?.letter"></div>
+                        <div class="detail-info">
+                            <p class="detail-pronunciation" x-text="'Pronunciation: ' + currentLetter?.pronunciation"></p>
+                            <p class="detail-description" x-text="currentLetter?.description"></p>
+                            <div class="detail-example">
+                                <span class="detail-emoji" x-text="currentLetter?.exampleImage"></span>
+                                <span class="detail-word" x-text="'Example: ' + currentLetter?.exampleWord"></span>
+                            </div>
+                            <button class="btn btn-primary" @click="playAudio(currentLetter?.letter)">🔊 Play Sound</button>
+                            <button class="btn btn-secondary" @click="playAudio(currentLetter?.exampleWord)">🔊 Play Example</button>
+                        </div>
+                    </div>
                 </div>
             </section>
             

@@ -1,108 +1,186 @@
 {
   "letters": [
     {
-      "name": "A",
-      "pronunciation": "/eɪ/"
+      "letter": "A",
+      "pronunciation": "/eɪ/",
+      "description": "The first letter of the alphabet",
+      "exampleWord": "Apple",
+      "exampleImage": "🍎"
     },
     {
-      "name": "B",
-      "pronunciation": "/biː/"
+      "letter": "B",
+      "pronunciation": "/biː/",
+      "description": "The second letter of the alphabet",
+      "exampleWord": "Ball",
+      "exampleImage": "⚽"
     },
     {
-      "name": "C",
-      "pronunciation": "/siː/"
+      "letter": "C",
+      "pronunciation": "/siː/",
+      "description": "The third letter of the alphabet",
+      "exampleWord": "Cat",
+      "exampleImage": "🐱"
     },
     {
-      "name": "D",
-      "pronunciation": "/diː/"
+      "letter": "D",
+      "pronunciation": "/diː/",
+      "description": "The fourth letter of the alphabet",
+      "exampleWord": "Dog",
+      "exampleImage": "🐕"
     },
     {
-      "name": "E",
-      "pronunciation": "/iː/"
+      "letter": "E",
+      "pronunciation": "/iː/",
+      "description": "The fifth letter of the alphabet",
+      "exampleWord": "Elephant",
+      "exampleImage": "🐘"
     },
     {
-      "name": "F",
-      "pronunciation": "/ɛf/"
+      "letter": "F",
+      "pronunciation": "/ɛf/",
+      "description": "The sixth letter of the alphabet",
+      "exampleWord": "Fish",
+      "exampleImage": "🐟"
     },
     {
-      "name": "G",
-      "pronunciation": "/dʒiː/"
+      "letter": "G",
+      "pronunciation": "/dʒiː/",
+      "description": "The seventh letter of the alphabet",
+      "exampleWord": "Giraffe",
+      "exampleImage": "🦒"
     },
     {
-      "name": "H",
-      "pronunciation": "/eɪtʃ/"
+      "letter": "H",
+      "pronunciation": "/eɪtʃ/",
+      "description": "The eighth letter of the alphabet",
+      "exampleWord": "House",
+      "exampleImage": "🏠"
     },
     {
-      "name": "I",
-      "pronunciation": "/aɪ/"
+      "letter": "I",
+      "pronunciation": "/aɪ/",
+      "description": "The ninth letter of the alphabet",
+      "exampleWord": "Ice Cream",
+      "exampleImage": "🍦"
     },
     {
-      "name": "J",
-      "pronunciation": "/dʒeɪ/"
+      "letter": "J",
+      "pronunciation": "/dʒeɪ/",
+      "description": "The tenth letter of the alphabet",
+      "exampleWord": "Juice",
+      "exampleImage": "🧃"
     },
     {
-      "name": "K",
-      "pronunciation": "/keɪ/"
+      "letter": "K",
+      "pronunciation": "/keɪ/",
+      "description": "The eleventh letter of the alphabet",
+      "exampleWord": "Kite",
+      "exampleImage": "🪁"
     },
     {
-      "name": "L",
-      "pronunciation": "/ɛl/"
+      "letter": "L",
+      "pronunciation": "/ɛl/",
+      "description": "The twelfth letter of the alphabet",
+      "exampleWord": "Lion",
+      "exampleImage": "🦁"
     },
     {
-      "name": "M",
-      "pronunciation": "/ɛm/"
+      "letter": "M",
+      "pronunciation": "/ɛm/",
+      "description": "The thirteenth letter of the alphabet",
+      "exampleWord": "Monkey",
+      "exampleImage": "🐒"
     },
     {
-      "name": "N",
-      "pronunciation": "/ɛn/"
+      "letter": "N",
+      "pronunciation": "/ɛn/",
+      "description": "The fourteenth letter of the alphabet",
+      "exampleWord": "Nest",
+      "exampleImage": "🪺"
     },
     {
-      "name": "O",
-      "pronunciation": "/oʊ/"
+      "letter": "O",
+      "pronunciation": "/oʊ/",
+      "description": "The fifteenth letter of the alphabet",
+      "exampleWord": "Orange",
+      "exampleImage": "🍊"
     },
     {
-      "name": "P",
-      "pronunciation": "/piː/"
+      "letter": "P",
+      "pronunciation": "/piː/",
+      "description": "The sixteenth letter of the alphabet",
+      "exampleWord": "Penguin",
+      "exampleImage": "🐧"
     },
     {
-      "name": "Q",
-      "pronunciation": "/kjuː/"
+      "letter": "Q",
+      "pronunciation": "/kjuː/",
+      "description": "The seventeenth letter of the alphabet",
+      "exampleWord": "Queen",
+      "exampleImage": "👸"
     },
     {
-      "name": "R",
-      "pronunciation": "/ɑːr/"
+      "letter": "R",
+      "pronunciation": "/ɑːr/",
+      "description": "The eighteenth letter of the alphabet",
+      "exampleWord": "Rabbit",
+      "exampleImage": "🐰"
     },
     {
-      "name": "S",
-      "pronunciation": "/ɛs/"
+      "letter": "S",
+      "pronunciation": "/ɛs/",
+      "description": "The nineteenth letter of the alphabet",
+      "exampleWord": "Sun",
+      "exampleImage": "☀️"
     },
     {
-      "name": "T",
-      "pronunciation": "/tiː/"
+      "letter": "T",
+      "pronunciation": "/tiː/",
+      "description": "The twentieth letter of the alphabet",
+      "exampleWord": "Tree",
+      "exampleImage": "🌳"
     },
     {
-      "name": "U",
-      "pronunciation": "/juː/"
+      "letter": "U",
+      "pronunciation": "/juː/",
+      "description": "The twenty-first letter of the alphabet",
+      "exampleWord": "Umbrella",
+      "exampleImage": "☂️"
     },
     {
-      "name": "V",
-      "pronunciation": "/viː/"
+      "letter": "V",
+      "pronunciation": "/viː/",
+      "description": "The twenty-second letter of the alphabet",
+      "exampleWord": "Violin",
+      "exampleImage": "🎻"
     },
     {
-      "name": "W",
-      "pronunciation": "/ˈdʌbəl.juː/"
+      "letter": "W",
+      "pronunciation": "/ˈdʌbəl.juː/",
+      "description": "The twenty-third letter of the alphabet",
+      "exampleWord": "Watermelon",
+      "exampleImage": "🍉"
     },
     {
-      "name": "X",
-      "pronunciation": "/ɛks/"
+      "letter": "X",
+      "pronunciation": "/ɛks/",
+      "description": "The twenty-fourth letter of the alphabet",
+      "exampleWord": "Xylophone",
+      "exampleImage": "🎵"
     },
     {
-      "name": "Y",
-      "pronunciation": "/waɪ/"
+      "letter": "Y",
+      "pronunciation": "/waɪ/",
+      "description": "The twenty-fifth letter of the alphabet",
+      "exampleWord": "Yacht",
+      "exampleImage": "⛵"
     },
     {
-      "name": "Z",
-      "pronunciation": "/ziː/"
+      "letter": "Z",
+      "pronunciation": "/ziː/",
+      "description": "The twenty-sixth letter of the alphabet",
+      "exampleWord": "Zebra",
+      "exampleImage": "🦓"
     }
   ]
 }

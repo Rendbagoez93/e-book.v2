@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js Test</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="page-wrapper" style="padding: 40px;">
+    <div class="content-card">
+        <h1>Alpine.js Test Page</h1>
+        
+        <!-- Simple Counter Test -->
+        <div x-data="{ count: 0 }" style="margin: 20px 0; padding: 20px; background: #f0f0f0; border-radius: 10px;">
+            <h2>Simple Counter Test</h2>
+            <p>Count: <span x-text="count"></span></p>
+            <button @click="count++" class="btn">Increment</button>
+        </div>
+        
+        <!-- Array Test -->
+        <div x-data="{ items: ['Apple', 'Banana', 'Cherry'] }" style="margin: 20px 0; padding: 20px; background: #f0f0f0; border-radius: 10px;">
+            <h2>Array Rendering Test</h2>
+            <ul>
+                <template x-for="item in items" :key="item">
+                    <li x-text="item"></li>
+                </template>
+            </ul>
+        </div>
+        
+        <!-- Object Array Test -->
+        <div x-data="{ 
+            letters: [
+                { letter: 'A', word: 'Apple' },
+                { letter: 'B', word: 'Banana' },
+                { letter: 'C', word: 'Cherry' }
+            ]
+        }" style="margin: 20px 0; padding: 20px; background: #f0f0f0; border-radius: 10px;">
+            <h2>Object Array Test</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+                <template x-for="letter in letters" :key="letter.letter">
+                    <div style="background: white; padding: 15px; text-align: center; border-radius: 10px;">
+                        <h3 x-text="letter.letter"></h3>
+                        <p x-text="letter.word"></p>
+                    </div>
+                </template>
+            </div>
+        </div>
+        
+        <!-- Fetch Test -->
+        <div x-data="{
+            letters: [],
+            loading: false,
+            error: null,
+            async init() {
+                this.loading = true;
+                try {
+                    const response = await fetch('/api/lessons/lesson-01/letters');
+                    const data = await response.json();
+                    console.log('Fetch test data:', data);
+                    this.letters = data.letters || data;
+                    console.log('Letters loaded:', this.letters.length);
+                } catch (e) {
+                    this.error = e.message;
+                    console.error('Fetch error:', e);
+                } finally {
+                    this.loading = false;
+                }
+            }
+        }" style="margin: 20px 0; padding: 20px; background: #f0f0f0; border-radius: 10px;">
+            <h2>API Fetch Test</h2>
+            <div x-show="loading">⏳ Loading...</div>
+            <div x-show="error">❌ Error: <span x-text="error"></span></div>
+            <div x-show="!loading && !error">
+                <p>✅ Loaded <span x-text="letters.length"></span> letters</p>
+                <div style="max-height: 200px; overflow-y: auto; background: white; padding: 10px; border-radius: 5px;">
+                    <template x-for="letter in letters.slice(0, 5)" :key="letter.letter">
+                        <div style="padding: 5px; border-bottom: 1px solid #ddd;">
+                            <strong x-text="letter.letter"></strong>: 
+                            <span x-text="letter.exampleWord"></span>
+                            <span x-text="letter.exampleImage"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
