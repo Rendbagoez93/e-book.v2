@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 01: Colors</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <!-- Load Alpine.js components BEFORE Alpine.js itself -->
+    <script src="/js/components/color-picker.js"></script>
+    <script src="/js/alpine-init.js"></script>
+    <!-- Load Alpine.js last with defer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="page-wrapper" x-data="{ currentLesson: 'lesson-01' }">
+    <header>
+        <div class="logo">
+            <span>📚</span>
+            <h1>BORCELLE - Colors</h1>
+        </div>
+        <p>MY EDUCATION | ABOUT | CONTACT</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lessons/alphabet.html">Alphabet</a></li>
+            <li><a href="/lessons/numbers.html">Numbers</a></li>
+            <li><a href="/lessons/colors.html">Colors</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <div class="content-card">
+            <h1 class="text-center">ENGLISH CLASS<br><span style="color: var(--text-accent);">COLORS</span></h1>
+            
+            <p class="text-center mb-3">Learn Different Colors and Their Names</p>
+            
+            <!-- Colors Section -->
+            <section x-data="colorPicker" class="mb-3">
+                <h2>🎨 Colors</h2>
+                
+                <!-- Loading State -->
+                <div x-show="loading" class="text-center p-3">
+                    <p>⏳ Loading colors...</p>
+                </div>
+                
+                <!-- Empty State -->
+                <div x-show="!loading && colors.length === 0" class="text-center p-3">
+                    <p>⚠️ No colors found. Please check console for errors.</p>
+                </div>
+                
+                <!-- Colors Grid -->
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;" x-show="!loading && colors.length > 0">
+                    <template x-for="color in colors" :key="color.name">
+                        <div class="color-swatch" 
+                             :style="`background-color: ${color.hex}`"
+                             @click="selectColor(color)"
+                             :title="color.name">
+                            <h3 x-text="color.name"></h3>
+                        </div>
+                    </template>
+                </div>
+                
+                <!-- Selected Color Info -->
+                <div x-show="selectedColor" class="mt-2 text-center">
+                    <p>Selected: <strong x-text="selectedColor?.name"></strong></p>
+                    <p x-text="'Pronunciation: ' + selectedColor?.pronunciation"></p>
+                    <button class="btn" x-show="selectedColor" @click="playAudio(selectedColor.name)">🔊 Play</button>
+                </div>
+            </section>
+        </div>
+        
+        <div class="page-nav">
+            <a href="/lessons/numbers.html">← Previous: Numbers</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 English A1 eBook by BORCELLE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

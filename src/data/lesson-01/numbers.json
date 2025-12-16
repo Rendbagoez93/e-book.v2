@@ -49,6 +49,141 @@
       "number": 10,
       "name": "ten",
       "pronunciation": "/tɛn/"
+    },
+    {
+      "number": 11,
+      "name": "eleven",
+      "pronunciation": "/ɪˈlɛv.ən/"
+    },
+    {
+      "number": 12,
+      "name": "twelve",
+      "pronunciation": "/twɛlv/"
+    },
+    {
+      "number": 13,
+      "name": "thirteen",
+      "pronunciation": "/ˌθɜːrˈtiːn/"
+    },
+    {
+      "number": 14,
+      "name": "fourteen",
+      "pronunciation": "/ˌfɔːrˈtiːn/"
+    },
+    {
+      "number": 15,
+      "name": "fifteen",
+      "pronunciation": "/ˌfɪfˈtiːn/"
+    },
+    {
+      "number": 16,
+      "name": "sixteen",
+      "pronunciation": "/ˌsɪksˈtiːn/"
+    },
+    {
+      "number": 17,
+      "name": "seventeen",
+      "pronunciation": "/ˌsɛv.ənˈtiːn/"
+    },
+    {
+      "number": 18,
+      "name": "eighteen",
+      "pronunciation": "/ˌeɪˈtiːn/"
+    },
+    {
+      "number": 19,
+      "name": "nineteen",
+      "pronunciation": "/ˌnaɪnˈtiːn/"
+    },
+    {
+      "number": 20,
+      "name": "twenty",
+      "pronunciation": "/ˈtwɛn.ti/"
+    },
+    {
+      "number": 21,
+      "name": "twenty-one",
+      "pronunciation": "/ˈtwɛn.ti wʌn/"
+    },
+    {
+      "number": 22,
+      "name": "twenty-two",
+      "pronunciation": "/ˈtwɛn.ti tuː/"
+    },
+    {
+      "number": 23,
+      "name": "twenty-three",
+      "pronunciation": "/ˈtwɛn.ti θriː/"
+    },
+    {
+      "number": 24,
+      "name": "twenty-four",
+      "pronunciation": "/ˈtwɛn.ti fɔːr/"
+    },
+    {
+      "number": 25,
+      "name": "twenty-five",
+      "pronunciation": "/ˈtwɛn.ti faɪv/"
+    },
+    {
+      "number": 26,
+      "name": "twenty-six",
+      "pronunciation": "/ˈtwɛn.ti sɪks/"
+    },
+    {
+      "number": 27,
+      "name": "twenty-seven",
+      "pronunciation": "/ˈtwɛn.ti ˈsɛv.ən/"
+    },
+    {
+      "number": 28,
+      "name": "twenty-eight",
+      "pronunciation": "/ˈtwɛn.ti eɪt/"
+    },
+    {
+      "number": 29,
+      "name": "twenty-nine",
+      "pronunciation": "/ˈtwɛn.ti naɪn/"
+    },
+    {
+      "number": 30,
+      "name": "thirty",
+      "pronunciation": "/ˈθɜːr.ti/"
+    },
+    {
+      "number": 40,
+      "name": "forty",
+      "pronunciation": "/ˈfɔːr.ti/"
+    },
+    {
+      "number": 50,
+      "name": "fifty",
+      "pronunciation": "/ˈfɪf.ti/"
+    },
+    {
+      "number": 60,
+      "name": "sixty",
+      "pronunciation": "/ˈsɪks.ti/"
+    },
+    {
+      "number": 70,
+      "name": "seventy",
+      "pronunciation": "/ˈsɛv.ən.ti/"
+    },
+    {
+      "number": 80,
+      "name": "eighty",
+      "pronunciation": "/ˈeɪ.ti/"
+    },
+    {
+      "number": 90,
+      "name": "ninety",
+      "pronunciation": "/ˈnaɪn.ti/"
+    },
+    {
+      "number": 100,
+      "name": "one hundred",
+      "pronunciation": "/wʌn ˈhʌn.drəd/"
     }
   ]
 }

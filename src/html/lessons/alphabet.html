@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 01: Alphabet</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <!-- Load Alpine.js components BEFORE Alpine.js itself -->
+    <script src="/js/components/alphabet-cards.js"></script>
+    <script src="/js/alpine-init.js"></script>
+    <!-- Load Alpine.js last with defer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="page-wrapper" x-data="{ currentLesson: 'lesson-01' }">
+    <header>
+        <div class="logo">
+            <span>📚</span>
+            <h1>BORCELLE - Alphabet</h1>
+        </div>
+        <p>MY EDUCATION | ABOUT | CONTACT</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lessons/alphabet.html">Alphabet</a></li>
+            <li><a href="/lessons/numbers.html">Numbers</a></li>
+            <li><a href="/lessons/colors.html">Colors</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <div class="content-card">
+            <h1 class="text-center">ENGLISH CLASS<br><span style="color: var(--text-accent);">ALPHABET</span></h1>
+            
+            <p class="text-center mb-3">Learn the Letters of the Alphabet from A to Z</p>
+            
+            <!-- Alphabet Section -->
+            <section x-data="alphabetCards" class="mb-3">
+                <h2>📝 Letters of the Alphabet (A-Z)</h2>
+                
+                <!-- Loading State -->
+                <div x-show="loading" class="text-center p-3">
+                    <p>⏳ Loading letters...</p>
+                </div>
+                
+                <!-- Empty State -->
+                <div x-show="!loading && letters.length === 0" class="text-center p-3">
+                    <p>⚠️ No letters found. Please check console for errors.</p>
+                </div>
+                
+                <!-- Letters Grid -->
+                <div class="alphabet-grid" x-show="!loading && letters.length > 0">
+                    <template x-for="letter in letters" :key="letter.letter">
+                        <div class="alphabet-card" 
+                             @click="selectLetter(letter)"
+                             :class="{ 'selected': currentLetter && currentLetter.letter === letter.letter }">
+                            <div class="letter-display">
+                                <span class="letter-main" x-text="letter.letter"></span>
+                                <span class="letter-lowercase" x-text="letter.letter.toLowerCase()"></span>
+                            </div>
+                            <div class="letter-info">
+                                <p class="pronunciation" x-text="letter.pronunciation"></p>
+                                <p class="example-emoji" x-text="letter.exampleImage"></p>
+                                <p class="example-word" x-text="letter.exampleWord"></p>
+                            </div>
+                            <button class="btn-audio" @click.stop="playAudio(letter.letter)">🔊</button>
+                        </div>
+                    </template>
+                </div>
+                
+                <!-- Detailed Letter View -->
+                <div x-show="currentLetter" class="letter-detail-modal" @click="clearSelection()">
+                    <div class="letter-detail-content" @click.stop>
+                        <button class="close-btn" @click="clearSelection()">✕</button>
+                        <div class="detail-letter" x-text="currentLetter?.letter"></div>
+                        <div class="detail-info">
+                            <p class="detail-pronunciation" x-text="'Pronunciation: ' + currentLetter?.pronunciation"></p>
+                            <p class="detail-description" x-text="currentLetter?.description"></p>
+                            <div class="detail-example">
+                                <span class="detail-emoji" x-text="currentLetter?.exampleImage"></span>
+                                <span class="detail-word" x-text="'Example: ' + currentLetter?.exampleWord"></span>
+                            </div>
+                            <button class="btn btn-primary" @click="playAudio(currentLetter?.letter)">🔊 Play Sound</button>
+                            <button class="btn btn-secondary" @click="playAudio(currentLetter?.exampleWord)">🔊 Play Example</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="page-nav">
+            <a href="/lessons/numbers.html">Next: Numbers →</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 English A1 eBook by BORCELLE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

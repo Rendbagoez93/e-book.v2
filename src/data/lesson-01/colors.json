@@ -49,6 +49,81 @@
       "name": "White",
       "hex": "#FFFFFF",
       "pronunciation": "waɪt"
+    },
+    {
+      "name": "Gray",
+      "hex": "#808080",
+      "pronunciation": "ɡreɪ"
+    },
+    {
+      "name": "Silver",
+      "hex": "#C0C0C0",
+      "pronunciation": "ˈsɪl.vər"
+    },
+    {
+      "name": "Gold",
+      "hex": "#FFD700",
+      "pronunciation": "ɡoʊld"
+    },
+    {
+      "name": "Cyan",
+      "hex": "#00FFFF",
+      "pronunciation": "ˈsaɪ.æn"
+    },
+    {
+      "name": "Magenta",
+      "hex": "#FF00FF",
+      "pronunciation": "məˈdʒɛn.tə"
+    },
+    {
+      "name": "Lime",
+      "hex": "#00FF00",
+      "pronunciation": "laɪm"
+    },
+    {
+      "name": "Maroon",
+      "hex": "#800000",
+      "pronunciation": "məˈruːn"
+    },
+    {
+      "name": "Navy",
+      "hex": "#000080",
+      "pronunciation": "ˈneɪ.vi"
+    },
+    {
+      "name": "Olive",
+      "hex": "#808000",
+      "pronunciation": "ˈɑː.lɪv"
+    },
+    {
+      "name": "Teal",
+      "hex": "#008080",
+      "pronunciation": "tiːl"
+    },
+    {
+      "name": "Violet",
+      "hex": "#EE82EE",
+      "pronunciation": "ˈvaɪ.ə.lət"
+    },
+    {
+      "name": "Indigo",
+      "hex": "#4B0082",
+      "pronunciation": "ˈɪn.dɪ.ɡoʊ"
+    },
+    {
+      "name": "Turquoise",
+      "hex": "#40E0D0",
+      "pronunciation": "ˈtɜːr.kwɔɪz"
+    },
+    {
+      "name": "Coral",
+      "hex": "#FF7F50",
+      "pronunciation": "ˈkɔr.əl"
+    },
+    {
+      "name": "Beige",
+      "hex": "#F5F5DC",
+      "pronunciation": "beɪʒ"
     }
   ]
 }

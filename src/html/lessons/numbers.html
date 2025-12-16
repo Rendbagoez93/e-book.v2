@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 01: Numbers</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <!-- Load Alpine.js components BEFORE Alpine.js itself -->
+    <script src="/js/components/number-grid.js"></script>
+    <script src="/js/alpine-init.js"></script>
+    <!-- Load Alpine.js last with defer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="page-wrapper" x-data="{ currentLesson: 'lesson-01' }">
+    <header>
+        <div class="logo">
+            <span>📚</span>
+            <h1>BORCELLE - Numbers</h1>
+        </div>
+        <p>MY EDUCATION | ABOUT | CONTACT</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lessons/alphabet.html">Alphabet</a></li>
+            <li><a href="/lessons/numbers.html">Numbers</a></li>
+            <li><a href="/lessons/colors.html">Colors</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <div class="content-card">
+            <h1 class="text-center">ENGLISH CLASS<br><span style="color: var(--text-accent);">NUMBERS</span></h1>
+            
+            <p class="text-center mb-3">Learn Numbers from 1 to 100</p>
+            
+            <!-- Numbers Section -->
+            <section x-data="numberGrid" class="mb-3">
+                <h2>🔢 Numbers</h2>
+                
+                <!-- Loading State -->
+                <div x-show="loading" class="text-center p-3">
+                    <p>⏳ Loading numbers...</p>
+                </div>
+                
+                <!-- Empty State -->
+                <div x-show="!loading && numbers.length === 0" class="text-center p-3">
+                    <p>⚠️ No numbers found. Please check console for errors.</p>
+                </div>
+                
+                <!-- Numbers Grid -->
+                <div class="grid" x-show="!loading && numbers.length > 0">
+                    <template x-for="number in numbers" :key="number.number">
+                        <div class="grid-item">
+                            <h3 x-text="number.number"></h3>
+                            <p x-text="number.name"></p>
+                            <p x-text="number.pronunciation"></p>
+                            <button class="btn" @click="playAudio(number.name)">🔊</button>
+                        </div>
+                    </template>
+                </div>
+            </section>
+        </div>
+        
+        <div class="page-nav">
+            <a href="/lessons/alphabet.html">← Previous: Alphabet</a> | 
+            <a href="/lessons/colors.html">Next: Colors →</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 English A1 eBook by BORCELLE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

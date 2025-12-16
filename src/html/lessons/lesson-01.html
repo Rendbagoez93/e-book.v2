@@ -3,17 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 01: Letters, Numbers, and Colors</title>
+    <title>Lesson 01: Basic Learning</title>
     <link rel="stylesheet" href="/css/base.css">
-    <!-- Load Alpine.js components BEFORE Alpine.js itself -->
-    <script src="/js/components/alphabet-cards.js"></script>
-    <script src="/js/components/number-grid.js"></script>
-    <script src="/js/components/color-picker.js"></script>
-    <script src="/js/alpine-init.js"></script>
-    <!-- Load Alpine.js last with defer -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .lesson-card {
+            background: var(--bg-secondary);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-md) 0;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        
+        .lesson-icon {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .lesson-title {
+            font-size: 2rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .lesson-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+    </style>
 </head>
-<body class="page-wrapper" x-data="{ currentLesson: 'lesson-01' }">
+<body class="page-wrapper">
     <header>
         <div class="logo">
             <span>📚</span>
@@ -25,7 +59,7 @@
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/lessons/lesson-01.html">Lesson 1: Letters, Numbers & Colors</a></li>
+            <li><a href="/lessons/lesson-01.html">Lesson 1: Basic Learning</a></li>
         </ul>
     </nav>
     
@@ -35,95 +69,49 @@
             
             <p class="text-center mb-3">Beyond Human: Exploring the English Session with Good Mood</p>
             
-            <!-- Alphabet Section -->
-            <section x-data="alphabetCards" class="mb-3">
-                <h2>📝 Letters of the Alphabet (A-Z)</h2>
-                
-                <!-- Loading State -->
-                <div x-show="loading" class="text-center p-3">
-                    <p>⏳ Loading letters...</p>
-                </div>
-                
-                <!-- Empty State -->
-                <div x-show="!loading && letters.length === 0" class="text-center p-3">
-                    <p>⚠️ No letters found. Please check console for errors.</p>
-                </div>
-                
-                <!-- Letters Grid -->
-                <div class="alphabet-grid" x-show="!loading && letters.length > 0">
-                    <template x-for="letter in letters" :key="letter.letter">
-                        <div class="alphabet-card" 
-                             @click="selectLetter(letter)"
-                             :class="{ 'selected': currentLetter && currentLetter.letter === letter.letter }">
-                            <div class="letter-display">
-                                <span class="letter-main" x-text="letter.letter"></span>
-                                <span class="letter-lowercase" x-text="letter.letter.toLowerCase()"></span>
-                            </div>
-                            <div class="letter-info">
-                                <p class="pronunciation" x-text="letter.pronunciation"></p>
-                                <p class="example-emoji" x-text="letter.exampleImage"></p>
-                                <p class="example-word" x-text="letter.exampleWord"></p>
-                            </div>
-                            <button class="btn-audio" @click.stop="playAudio(letter.letter)">🔊</button>
-                        </div>
-                    </template>
-                </div>
-                
-                <!-- Detailed Letter View -->
-                <div x-show="currentLetter" class="letter-detail-modal" @click="clearSelection()">
-                    <div class="letter-detail-content" @click.stop>
-                        <button class="close-btn" @click="clearSelection()">✕</button>
-                        <div class="detail-letter" x-text="currentLetter?.letter"></div>
-                        <div class="detail-info">
-                            <p class="detail-pronunciation" x-text="'Pronunciation: ' + currentLetter?.pronunciation"></p>
-                            <p class="detail-description" x-text="currentLetter?.description"></p>
-                            <div class="detail-example">
-                                <span class="detail-emoji" x-text="currentLetter?.exampleImage"></span>
-                                <span class="detail-word" x-text="'Example: ' + currentLetter?.exampleWord"></span>
-                            </div>
-                            <button class="btn btn-primary" @click="playAudio(currentLetter?.letter)">🔊 Play Sound</button>
-                            <button class="btn btn-secondary" @click="playAudio(currentLetter?.exampleWord)">🔊 Play Example</button>
-                        </div>
+            <p class="text-center" style="font-size: 1.2rem; margin: var(--spacing-lg) 0;">
+                Choose a topic to start learning:
+            </p>
+            
+            <div class="lessons-grid">
+                <!-- Alphabet Lesson Card -->
+                <a href="/lessons/alphabet.html" style="text-decoration: none;">
+                    <div class="lesson-card">
+                        <div class="lesson-icon">📝</div>
+                        <h2 class="lesson-title">Alphabet</h2>
+                        <p class="lesson-description">
+                            Learn all 26 letters from A to Z with pronunciations and examples
+                        </p>
                     </div>
-                </div>
-            </section>
-            
-            <!-- Numbers Section -->
-            <section x-data="numberGrid" class="mb-3">
-                <h2>🔢 Numbers 1-10</h2>
-                <div class="grid">
-                    <template x-for="number in numbers" :key="number.number">
-                        <div class="grid-item">
-                            <h3 x-text="number.number"></h3>
-                            <p x-text="number.name"></p>
-                            <p x-text="number.pronunciation"></p>
-                            <button class="btn" @click="playAudio(number.name)">🔊</button>
-                        </div>
-                    </template>
-                </div>
-            </section>
-            
-            <!-- Colors Section -->
-            <section x-data="colorPicker" class="mb-3">
-                <h2>🎨 Colors</h2>
-                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                    <template x-for="color in colors" :key="color.name">
-                        <div class="color-swatch" 
-                             :style="`background-color: ${color.hex}`"
-                             @click="selectColor(color)"
-                             :title="color.name">
-                            <h3 x-text="color.name"></h3>
-                        </div>
-                    </template>
-                </div>
-                <div x-show="selectedColor" class="mt-2 text-center">
-                    <p>Selected: <span x-text="selectedColor.name"></span></p>
-                    <button class="btn" x-show="selectedColor" @click="playAudio(selectedColor.name)">🔊 Play</button>
-                </div>
-            </section>
+                </a>
+                
+                <!-- Numbers Lesson Card -->
+                <a href="/lessons/numbers.html" style="text-decoration: none;">
+                    <div class="lesson-card">
+                        <div class="lesson-icon">🔢</div>
+                        <h2 class="lesson-title">Numbers</h2>
+                        <p class="lesson-description">
+                            Master numbers from 1 to 100 including pronunciations
+                        </p>
+                    </div>
+                </a>
+                
+                <!-- Colors Lesson Card -->
+                <a href="/lessons/colors.html" style="text-decoration: none;">
+                    <div class="lesson-card">
+                        <div class="lesson-icon">🎨</div>
+                        <h2 class="lesson-title">Colors</h2>
+                        <p class="lesson-description">
+                            Discover 25 different colors with their names and pronunciations
+                        </p>
+                    </div>
+                </a>
+            </div>
         </div>
         
-        <div class="page-nav">PAGE 03</div>
+        <div class="page-nav">
+            <p>Click on any card above to start learning!</p>
+        </div>
     </main>
     
     <footer>
