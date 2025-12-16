@@ -23,6 +23,7 @@
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/lessons/lesson-01.html">Lesson 1: Basic Learning</a></li>
             <li><a href="/lessons/lesson-02.html">Lesson 2: Words</a></li>
             <li><a href="/lessons/verbs.html">Verbs</a></li>
             <li><a href="/lessons/nouns.html">Nouns</a></li>
@@ -69,7 +70,6 @@
                             <div class="word-emoji" x-text="noun.emoji"></div>
                             <div class="word-main" x-text="noun.word"></div>
                             <div class="word-pronunciation" x-text="noun.pronunciation"></div>
-                            <div class="word-definition" x-text="noun.definition"></div>
                             <button class="btn-audio" @click.stop="playAudio(noun.word)">🔊</button>
                         </div>
                     </template>
@@ -83,7 +83,6 @@
                         <div class="detail-word" x-text="currentNoun?.word"></div>
                         <div class="detail-info">
                             <p class="detail-pronunciation" x-text="'Pronunciation: ' + currentNoun?.pronunciation"></p>
-                            <p class="detail-definition" x-text="'Definition: ' + currentNoun?.definition"></p>
                             <div class="detail-example">
                                 <strong>Example:</strong>
                                 <p x-text="currentNoun?.example"></p>

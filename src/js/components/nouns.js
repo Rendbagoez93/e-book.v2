@@ -1,6 +1,6 @@
 // Nouns Component
 // Manages the display and interaction of noun words
-// Displays nouns with definitions, examples, and audio playback
+// Displays nouns with examples, categories, and audio playback
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('nounsComponent', () => ({

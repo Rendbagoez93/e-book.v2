@@ -287,6 +287,23 @@ footer nav li {
     box-shadow: var(--shadow-card);
     font-weight: 700;
     z-index: 100;
+    color: var(--text-secondary);
+}
+
+.page-nav a {
+    color: var(--btn-primary);
+    text-decoration: none;
+}
+
+.page-nav a:hover {
+    color: var(--btn-hover);
+    text-decoration: underline;
+}
+
+.page-nav p {
+    color: var(--text-secondary);
+    display: inline;
+    margin: 0;
 }
 
 /* ===========================

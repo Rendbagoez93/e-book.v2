@@ -3,7 +3,6 @@
     {
       "word": "run",
       "pronunciation": "/rʌn/",
-      "definition": "To move at a speed faster than walking",
       "example": "I run every morning.",
       "category": "action",
       "emoji": "🏃"
@@ -11,7 +10,6 @@
     {
       "word": "walk",
       "pronunciation": "/wɔːk/",
-      "definition": "To move at a regular pace by lifting and setting down each foot",
       "example": "She walks to school.",
       "category": "action",
       "emoji": "🚶"
@@ -19,7 +17,6 @@
     {
       "word": "eat",
       "pronunciation": "/iːt/",
-      "definition": "To put food in your mouth and swallow it",
       "example": "We eat breakfast at 7 AM.",
       "category": "action",
       "emoji": "🍽️"
@@ -27,7 +24,6 @@
     {
       "word": "drink",
       "pronunciation": "/drɪŋk/",
-      "definition": "To take liquid into your mouth and swallow it",
       "example": "He drinks water every day.",
       "category": "action",
       "emoji": "🥤"
@@ -35,7 +31,6 @@
     {
       "word": "sleep",
       "pronunciation": "/sliːp/",
-      "definition": "To rest with your eyes closed and your mind inactive",
       "example": "I sleep for 8 hours.",
       "category": "action",
       "emoji": "😴"
@@ -43,7 +38,6 @@
     {
       "word": "read",
       "pronunciation": "/riːd/",
-      "definition": "To look at and understand written words",
       "example": "She reads books every night.",
       "category": "mental",
       "emoji": "📖"
@@ -51,7 +45,6 @@
     {
       "word": "write",
       "pronunciation": "/raɪt/",
-      "definition": "To make letters or numbers on a surface",
       "example": "I write in my journal.",
       "category": "mental",
       "emoji": "✍️"
@@ -59,7 +52,6 @@
     {
       "word": "speak",
       "pronunciation": "/spiːk/",
-      "definition": "To say words aloud",
       "example": "He speaks three languages.",
       "category": "communication",
       "emoji": "🗣️"
@@ -67,7 +59,6 @@
     {
       "word": "listen",
       "pronunciation": "/ˈlɪs.ən/",
-      "definition": "To pay attention to sound",
       "example": "Please listen carefully.",
       "category": "communication",
       "emoji": "👂"
@@ -75,7 +66,6 @@
     {
       "word": "think",
       "pronunciation": "/θɪŋk/",
-      "definition": "To use your mind to consider something",
       "example": "I think about my family.",
       "category": "mental",
       "emoji": "🤔"
@@ -83,7 +73,6 @@
     {
       "word": "learn",
       "pronunciation": "/lɜːrn/",
-      "definition": "To gain knowledge or skill",
       "example": "We learn English every day.",
       "category": "mental",
       "emoji": "📚"
@@ -91,7 +80,6 @@
     {
       "word": "teach",
       "pronunciation": "/tiːtʃ/",
-      "definition": "To give knowledge or skill to someone",
       "example": "She teaches mathematics.",
       "category": "communication",
       "emoji": "👨‍🏫"
@@ -99,7 +87,6 @@
     {
       "word": "play",
       "pronunciation": "/pleɪ/",
-      "definition": "To engage in activity for enjoyment",
       "example": "Children play in the park.",
       "category": "action",
       "emoji": "🎮"
@@ -107,7 +94,6 @@
     {
       "word": "work",
       "pronunciation": "/wɜːrk/",
-      "definition": "To do a job or task",
       "example": "I work at a hospital.",
       "category": "action",
       "emoji": "💼"
@@ -115,7 +101,6 @@
     {
       "word": "cook",
       "pronunciation": "/kʊk/",
-      "definition": "To prepare food by heating it",
       "example": "My mother cooks delicious meals.",
       "category": "action",
       "emoji": "🍳"
@@ -123,7 +108,6 @@
     {
       "word": "clean",
       "pronunciation": "/kliːn/",
-      "definition": "To remove dirt from something",
       "example": "I clean my room every week.",
       "category": "action",
       "emoji": "🧹"
@@ -131,7 +115,6 @@
     {
       "word": "watch",
       "pronunciation": "/wɑːtʃ/",
-      "definition": "To look at something for a period of time",
       "example": "We watch movies on weekends.",
       "category": "action",
       "emoji": "📺"
@@ -139,7 +122,6 @@
     {
       "word": "open",
       "pronunciation": "/ˈoʊ.pən/",
-      "definition": "To make something not closed",
       "example": "Please open the door.",
       "category": "action",
       "emoji": "🚪"
@@ -147,7 +129,6 @@
     {
       "word": "close",
       "pronunciation": "/kloʊz/",
-      "definition": "To shut something",
       "example": "Close the window, please.",
       "category": "action",
       "emoji": "🔒"
@@ -155,7 +136,6 @@
     {
       "word": "love",
       "pronunciation": "/lʌv/",
-      "definition": "To have strong affection for someone or something",
       "example": "I love my family.",
       "category": "emotion",
       "emoji": "❤️"

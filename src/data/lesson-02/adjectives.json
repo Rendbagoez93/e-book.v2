@@ -3,7 +3,6 @@
     {
       "word": "big",
       "pronunciation": "/bɪɡ/",
-      "definition": "Large in size",
       "example": "The elephant is a big animal.",
       "category": "size",
       "opposite": "small",
@@ -12,7 +11,6 @@
     {
       "word": "small",
       "pronunciation": "/smɔːl/",
-      "definition": "Little in size",
       "example": "The mouse is small.",
       "category": "size",
       "opposite": "big",
@@ -21,7 +19,6 @@
     {
       "word": "happy",
       "pronunciation": "/ˈhæp.i/",
-      "definition": "Feeling pleased or content",
       "example": "She is happy today.",
       "category": "emotion",
       "opposite": "sad",
@@ -30,7 +27,6 @@
     {
       "word": "sad",
       "pronunciation": "/sæd/",
-      "definition": "Feeling unhappy",
       "example": "He looks sad.",
       "category": "emotion",
       "opposite": "happy",
@@ -39,7 +35,6 @@
     {
       "word": "hot",
       "pronunciation": "/hɑːt/",
-      "definition": "Having a high temperature",
       "example": "Summer is very hot.",
       "category": "temperature",
       "opposite": "cold",
@@ -48,7 +43,6 @@
     {
       "word": "cold",
       "pronunciation": "/koʊld/",
-      "definition": "Having a low temperature",
       "example": "Winter is cold.",
       "category": "temperature",
       "opposite": "hot",
@@ -57,7 +51,6 @@
     {
       "word": "good",
       "pronunciation": "/ɡʊd/",
-      "definition": "Of high quality or satisfactory",
       "example": "This is a good book.",
       "category": "quality",
       "opposite": "bad",
@@ -66,7 +59,6 @@
     {
       "word": "bad",
       "pronunciation": "/bæd/",
-      "definition": "Of poor quality",
       "example": "That was a bad idea.",
       "category": "quality",
       "opposite": "good",
@@ -75,7 +67,6 @@
     {
       "word": "fast",
       "pronunciation": "/fæst/",
-      "definition": "Moving or happening quickly",
       "example": "The car is very fast.",
       "category": "speed",
       "opposite": "slow",
@@ -84,7 +75,6 @@
     {
       "word": "slow",
       "pronunciation": "/sloʊ/",
-      "definition": "Moving or happening without speed",
       "example": "The turtle is slow.",
       "category": "speed",
       "opposite": "fast",
@@ -93,7 +83,6 @@
     {
       "word": "beautiful",
       "pronunciation": "/ˈbjuː.tɪ.fəl/",
-      "definition": "Pleasing to look at",
       "example": "She has beautiful eyes.",
       "category": "appearance",
       "opposite": "ugly",
@@ -102,7 +91,6 @@
     {
       "word": "new",
       "pronunciation": "/nuː/",
-      "definition": "Recently made or bought",
       "example": "I have a new phone.",
       "category": "age",
       "opposite": "old",
@@ -111,7 +99,6 @@
     {
       "word": "old",
       "pronunciation": "/oʊld/",
-      "definition": "Having existed for a long time",
       "example": "This is an old building.",
       "category": "age",
       "opposite": "new",
@@ -120,7 +107,6 @@
     {
       "word": "tall",
       "pronunciation": "/tɔːl/",
-      "definition": "Of great height",
       "example": "He is a tall man.",
       "category": "size",
       "opposite": "short",
@@ -129,7 +115,6 @@
     {
       "word": "short",
       "pronunciation": "/ʃɔːrt/",
-      "definition": "Not tall or long",
       "example": "She is short.",
       "category": "size",
       "opposite": "tall",
@@ -138,7 +123,6 @@
     {
       "word": "easy",
       "pronunciation": "/ˈiː.zi/",
-      "definition": "Not difficult",
       "example": "This test is easy.",
       "category": "difficulty",
       "opposite": "difficult",
@@ -147,7 +131,6 @@
     {
       "word": "difficult",
       "pronunciation": "/ˈdɪf.ɪ.kəlt/",
-      "definition": "Hard to do or understand",
       "example": "This problem is difficult.",
       "category": "difficulty",
       "opposite": "easy",
@@ -156,7 +139,6 @@
     {
       "word": "clean",
       "pronunciation": "/kliːn/",
-      "definition": "Free from dirt",
       "example": "My room is clean.",
       "category": "condition",
       "opposite": "dirty",
@@ -165,7 +147,6 @@
     {
       "word": "dirty",
       "pronunciation": "/ˈdɜːr.ti/",
-      "definition": "Not clean",
       "example": "Your shoes are dirty.",
       "category": "condition",
       "opposite": "clean",
@@ -174,7 +155,6 @@
     {
       "word": "strong",
       "pronunciation": "/strɔːŋ/",
-      "definition": "Having physical power",
       "example": "The man is very strong.",
       "category": "physical",
       "opposite": "weak",
