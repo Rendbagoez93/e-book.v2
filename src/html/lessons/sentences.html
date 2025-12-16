@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 03: Simple Sentences</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <!-- Load Alpine.js components BEFORE Alpine.js itself -->
+    <script src="/js/components/sentences.js"></script>
+    <script src="/js/alpine-init.js"></script>
+    <!-- Load Alpine.js last with defer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="page-wrapper" x-data="{ currentLesson: 'lesson-03' }">
+    <header>
+        <div class="logo">
+            <span>📚</span>
+            <h1>BORCELLE - Simple Sentences</h1>
+        </div>
+        <p>MY EDUCATION | ABOUT | CONTACT</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lessons/lesson-01.html">Lesson 1: Basic Learning</a></li>
+            <li><a href="/lessons/lesson-02.html">Lesson 2: Words</a></li>
+            <li><a href="/lessons/lesson-03.html">Lesson 3: Sentences</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <div class="content-card">
+            <h1 class="text-center">ENGLISH CLASS<br><span style="color: var(--text-accent);">SIMPLE SENTENCES</span></h1>
+            
+            <p class="text-center mb-3">Learn Common English Sentences with Bahasa Indonesia Translation</p>
+            
+            <!-- Sentences Section -->
+            <section x-data="sentencesComponent" class="mb-3">
+                <h2>💬 English Sentences with Translation</h2>
+                
+                <!-- Controls -->
+                <div class="sentence-controls" style="margin: 20px 0; text-align: center; display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- Category Filter -->
+                    <div>
+                        <label style="font-weight: bold; margin-right: 10px;">Filter by category:</label>
+                        <select x-model="filterCategory" class="filter-select" style="padding: 8px 15px; border-radius: 10px; border: 2px solid var(--btn-primary); background: white; font-size: 1rem;">
+                            <template x-for="category in categories" :key="category">
+                                <option :value="category" x-text="category.charAt(0).toUpperCase() + category.slice(1)"></option>
+                            </template>
+                        </select>
+                    </div>
+                    
+                    <!-- Translation Toggle -->
+                    <div>
+                        <button @click="toggleTranslation()" class="btn" style="padding: 8px 20px;">
+                            <span x-show="showTranslation">🙈 Hide Translation</span>
+                            <span x-show="!showTranslation">👁️ Show Translation</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Loading State -->
+                <div x-show="loading" class="text-center p-3">
+                    <p>⏳ Loading sentences...</p>
+                </div>
+                
+                <!-- Empty State -->
+                <div x-show="!loading && sentences.length === 0" class="text-center p-3">
+                    <p>⚠️ No sentences found. Please check console for errors.</p>
+                </div>
+                
+                <!-- Sentences Grid -->
+                <div class="sentences-grid" x-show="!loading && filteredSentences.length > 0">
+                    <template x-for="sentence in filteredSentences" :key="sentence.english">
+                        <div class="sentence-card" 
+                             @click="selectSentence(sentence)"
+                             :class="{ 'selected': currentSentence && currentSentence.english === sentence.english }">
+                            <div class="sentence-category" 
+                                 :style="'background: ' + getCategoryColor(sentence.category) + '; color: white; padding: 5px 10px; border-radius: 15px; display: inline-block; font-size: 0.85rem; margin-bottom: 10px;'"
+                                 x-text="sentence.category"></div>
+                            <div class="sentence-english" x-text="sentence.english"></div>
+                            <div class="sentence-bahasa" x-show="showTranslation" x-text="sentence.bahasa"></div>
+                            <button class="btn-audio" @click.stop="playAudio(sentence.english)">🔊</button>
+                        </div>
+                    </template>
+                </div>
+                
+                <!-- Detailed Sentence View -->
+                <div x-show="currentSentence" class="word-detail-modal" @click="clearSelection()">
+                    <div class="word-detail-content" @click.stop>
+                        <button class="close-btn" @click="clearSelection()">✕</button>
+                        <div class="detail-info">
+                            <h2 class="detail-sentence-title">English</h2>
+                            <p class="detail-sentence-text" x-text="currentSentence?.english"></p>
+                            
+                            <h2 class="detail-sentence-title">Bahasa Indonesia</h2>
+                            <p class="detail-sentence-text" x-text="currentSentence?.bahasa"></p>
+                            
+                            <div class="detail-pronunciation">
+                                <strong>Pronunciation:</strong>
+                                <p x-text="currentSentence?.pronunciation"></p>
+                            </div>
+                            
+                            <div class="detail-category">
+                                <strong>Category:</strong>
+                                <span x-text="currentSentence?.category"></span>
+                            </div>
+                            
+                            <div style="margin-top: 20px; display: flex; gap: 10px; justify-content: center;">
+                                <button class="btn btn-primary" @click="playAudio(currentSentence?.english)">🔊 Play English</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="page-nav">
+            <a href="/lessons/lesson-03.html">← Back to Lesson 3</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 English A1 eBook by BORCELLE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

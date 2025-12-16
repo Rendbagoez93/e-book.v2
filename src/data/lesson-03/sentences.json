@@ -1,0 +1,214 @@
+{
+  "sentences": [
+    {
+      "english": "Hello, how are you?",
+      "bahasa": "Halo, apa kabar?",
+      "pronunciation": "/həˈloʊ, haʊ ɑːr juː/",
+      "category": "greeting"
+    },
+    {
+      "english": "Good morning!",
+      "bahasa": "Selamat pagi!",
+      "pronunciation": "/ɡʊd ˈmɔːr.nɪŋ/",
+      "category": "greeting"
+    },
+    {
+      "english": "Good night!",
+      "bahasa": "Selamat malam!",
+      "pronunciation": "/ɡʊd naɪt/",
+      "category": "greeting"
+    },
+    {
+      "english": "Thank you very much.",
+      "bahasa": "Terima kasih banyak.",
+      "pronunciation": "/θæŋk juː ˈver.i mʌtʃ/",
+      "category": "gratitude"
+    },
+    {
+      "english": "You're welcome.",
+      "bahasa": "Sama-sama.",
+      "pronunciation": "/jʊər ˈwel.kəm/",
+      "category": "gratitude"
+    },
+    {
+      "english": "I am a student.",
+      "bahasa": "Saya seorang siswa.",
+      "pronunciation": "/aɪ æm ə ˈstuː.dənt/",
+      "category": "introduction"
+    },
+    {
+      "english": "My name is John.",
+      "bahasa": "Nama saya John.",
+      "pronunciation": "/maɪ neɪm ɪz dʒɑːn/",
+      "category": "introduction"
+    },
+    {
+      "english": "I live in Jakarta.",
+      "bahasa": "Saya tinggal di Jakarta.",
+      "pronunciation": "/aɪ lɪv ɪn dʒəˈkɑːr.tə/",
+      "category": "introduction"
+    },
+    {
+      "english": "What is your name?",
+      "bahasa": "Siapa nama Anda?",
+      "pronunciation": "/wʌt ɪz jʊər neɪm/",
+      "category": "question"
+    },
+    {
+      "english": "Where is the bathroom?",
+      "bahasa": "Di mana kamar mandi?",
+      "pronunciation": "/wer ɪz ðə ˈbæθ.ruːm/",
+      "category": "question"
+    },
+    {
+      "english": "How much is this?",
+      "bahasa": "Berapa harganya?",
+      "pronunciation": "/haʊ mʌtʃ ɪz ðɪs/",
+      "category": "question"
+    },
+    {
+      "english": "I don't understand.",
+      "bahasa": "Saya tidak mengerti.",
+      "pronunciation": "/aɪ doʊnt ˌʌn.dərˈstænd/",
+      "category": "communication"
+    },
+    {
+      "english": "Can you help me?",
+      "bahasa": "Bisakah Anda membantu saya?",
+      "pronunciation": "/kæn juː help miː/",
+      "category": "request"
+    },
+    {
+      "english": "I am hungry.",
+      "bahasa": "Saya lapar.",
+      "pronunciation": "/aɪ æm ˈhʌŋ.ɡri/",
+      "category": "feeling"
+    },
+    {
+      "english": "I am tired.",
+      "bahasa": "Saya lelah.",
+      "pronunciation": "/aɪ æm taɪərd/",
+      "category": "feeling"
+    },
+    {
+      "english": "The weather is nice today.",
+      "bahasa": "Cuaca hari ini bagus.",
+      "pronunciation": "/ðə ˈweð.ər ɪz naɪs təˈdeɪ/",
+      "category": "daily"
+    },
+    {
+      "english": "I like this book.",
+      "bahasa": "Saya suka buku ini.",
+      "pronunciation": "/aɪ laɪk ðɪs bʊk/",
+      "category": "preference"
+    },
+    {
+      "english": "She is my friend.",
+      "bahasa": "Dia adalah teman saya.",
+      "pronunciation": "/ʃiː ɪz maɪ frend/",
+      "category": "relationship"
+    },
+    {
+      "english": "We go to school every day.",
+      "bahasa": "Kami pergi ke sekolah setiap hari.",
+      "pronunciation": "/wiː ɡoʊ tuː skuːl ˈev.ri deɪ/",
+      "category": "daily"
+    },
+    {
+      "english": "I love my family.",
+      "bahasa": "Saya cinta keluarga saya.",
+      "pronunciation": "/aɪ lʌv maɪ ˈfæm.əl.i/",
+      "category": "relationship"
+    },
+    {
+      "english": "Please speak slowly.",
+      "bahasa": "Tolong bicara pelan-pelan.",
+      "pronunciation": "/pliːz spiːk ˈsloʊ.li/",
+      "category": "request"
+    },
+    {
+      "english": "I am learning English.",
+      "bahasa": "Saya sedang belajar bahasa Inggris.",
+      "pronunciation": "/aɪ æm ˈlɜːr.nɪŋ ˈɪŋ.ɡlɪʃ/",
+      "category": "learning"
+    },
+    {
+      "english": "Excuse me.",
+      "bahasa": "Permisi.",
+      "pronunciation": "/ɪkˈskjuːz miː/",
+      "category": "polite"
+    },
+    {
+      "english": "I'm sorry.",
+      "bahasa": "Maaf.",
+      "pronunciation": "/aɪm ˈsɑːr.i/",
+      "category": "polite"
+    },
+    {
+      "english": "See you later!",
+      "bahasa": "Sampai jumpa!",
+      "pronunciation": "/siː juː ˈleɪ.t̬ɚ/",
+      "category": "farewell"
+    },
+    {
+      "english": "What time is it?",
+      "bahasa": "Jam berapa sekarang?",
+      "pronunciation": "/wʌt taɪm ɪz ɪt/",
+      "category": "question"
+    },
+    {
+      "english": "I need some water.",
+      "bahasa": "Saya butuh air.",
+      "pronunciation": "/aɪ niːd sʌm ˈwɔː.tər/",
+      "category": "request"
+    },
+    {
+      "english": "This is my brother.",
+      "bahasa": "Ini adalah kakak laki-laki saya.",
+      "pronunciation": "/ðɪs ɪz maɪ ˈbrʌð.ər/",
+      "category": "relationship"
+    },
+    {
+      "english": "I work in an office.",
+      "bahasa": "Saya bekerja di kantor.",
+      "pronunciation": "/aɪ wɜːrk ɪn ən ˈɔː.fɪs/",
+      "category": "daily"
+    },
+    {
+      "english": "Do you speak English?",
+      "bahasa": "Apakah Anda berbicara bahasa Inggris?",
+      "pronunciation": "/duː juː spiːk ˈɪŋ.ɡlɪʃ/",
+      "category": "communication"
+    },
+    {
+      "english": "Nice to meet you.",
+      "bahasa": "Senang bertemu dengan Anda.",
+      "pronunciation": "/naɪs tuː miːt juː/",
+      "category": "greeting"
+    },
+    {
+      "english": "I feel happy today.",
+      "bahasa": "Saya merasa senang hari ini.",
+      "pronunciation": "/aɪ fiːl ˈhæp.i təˈdeɪ/",
+      "category": "feeling"
+    },
+    {
+      "english": "Can I have the menu?",
+      "bahasa": "Bolehkah saya lihat menunya?",
+      "pronunciation": "/kæn aɪ hæv ðə ˈmen.juː/",
+      "category": "request"
+    },
+    {
+      "english": "Have a nice day!",
+      "bahasa": "Semoga hari Anda menyenangkan!",
+      "pronunciation": "/hæv ə naɪs deɪ/",
+      "category": "farewell"
+    },
+    {
+      "english": "I am from Indonesia.",
+      "bahasa": "Saya berasal dari Indonesia.",
+      "pronunciation": "/aɪ æm frɒm ˌɪn.dəˈniː.ʒə/",
+      "category": "introduction"
+    }
+  ]
+}
