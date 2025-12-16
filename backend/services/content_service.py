@@ -33,3 +33,15 @@ class ContentService:
             'numbers': self.get_numbers(lesson_id),
             'colors': self.get_colors(lesson_id)
         }
+
+    def get_word_data(self, lesson_id, word_type):
+        """Get word data (verbs, nouns, adjectives) for a specific lesson
+        
+        Args:
+            lesson_id: The lesson identifier (e.g., 'lesson-02')
+            word_type: The type of words (e.g., 'verbs', 'nouns', 'adjectives')
+        
+        Returns:
+            Dictionary containing the word data
+        """
+        return self.load_json(f'{lesson_id}/{word_type}.json')

@@ -738,3 +738,229 @@ footer nav li {
         font-size: 4rem;
     }
 }
+
+/* ===========================
+   Word Components (Lesson 02)
+   =========================== */
+
+/* Words Grid */
+.words-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Word Card */
+.word-card {
+    background: white;
+    border-radius: var(--radius-sm);
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    border: 3px solid transparent;
+}
+
+.word-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    border-color: var(--btn-primary);
+}
+
+.word-card.selected {
+    border-color: var(--btn-primary);
+    background: #fff8f8;
+}
+
+.word-emoji {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.word-main {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.word-pronunciation {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.word-definition {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    min-height: 40px;
+}
+
+/* Word Detail Modal */
+.word-detail-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.word-detail-content {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.detail-emoji {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detail-word {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.detail-info {
+    text-align: left;
+}
+
+.detail-pronunciation,
+.detail-definition {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.detail-example {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.detail-example strong {
+    color: var(--btn-primary);
+}
+
+.detail-example p {
+    margin: 5px 0 0 0;
+    font-style: italic;
+}
+
+.detail-category,
+.detail-type,
+.detail-opposite {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.detail-category strong,
+.detail-type strong,
+.detail-opposite strong {
+    color: var(--btn-primary);
+    margin-right: 5px;
+}
+
+.detail-category span,
+.detail-type span,
+.detail-opposite span {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-transform: capitalize;
+}
+
+/* Filter Section */
+.filter-section {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+}
+
+.filter-select {
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+    border-color: var(--btn-hover);
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+/* Responsive Design for Words */
+@media (max-width: 768px) {
+    .words-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .word-main {
+        font-size: 1.5rem;
+    }
+    
+    .word-emoji {
+        font-size: 2.5rem;
+    }
+    
+    .word-detail-content {
+        padding: 30px 20px;
+    }
+    
+    .detail-word {
+        font-size: 2.5rem;
+    }
+    
+    .detail-emoji {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .words-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .word-card {
+        padding: 15px;
+    }
+    
+    .detail-word {
+        font-size: 2rem;
+    }
+    
+    .detail-emoji {
+        font-size: 3rem;
+    }
+    
+    .word-detail-content {
+        padding: 20px;
+    }
+}

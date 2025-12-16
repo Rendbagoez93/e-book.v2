@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 02: Nouns</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <!-- Load Alpine.js components BEFORE Alpine.js itself -->
+    <script src="/js/components/nouns.js"></script>
+    <script src="/js/alpine-init.js"></script>
+    <!-- Load Alpine.js last with defer -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="page-wrapper" x-data="{ currentLesson: 'lesson-02' }">
+    <header>
+        <div class="logo">
+            <span>📚</span>
+            <h1>BORCELLE - Nouns</h1>
+        </div>
+        <p>MY EDUCATION | ABOUT | CONTACT</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lessons/lesson-02.html">Lesson 2: Words</a></li>
+            <li><a href="/lessons/verbs.html">Verbs</a></li>
+            <li><a href="/lessons/nouns.html">Nouns</a></li>
+            <li><a href="/lessons/adjectives.html">Adjectives</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <div class="content-card">
+            <h1 class="text-center">ENGLISH CLASS<br><span style="color: var(--text-accent);">NOUNS</span></h1>
+            
+            <p class="text-center mb-3">Learn Naming Words - People, Places, and Things</p>
+            
+            <!-- Nouns Section -->
+            <section x-data="nounsComponent" class="mb-3">
+                <h2>📦 Nouns - Naming Words</h2>
+                
+                <!-- Category Filter -->
+                <div class="filter-section" style="margin: 20px 0; text-align: center;">
+                    <label style="font-weight: bold; margin-right: 10px;">Filter by category:</label>
+                    <select x-model="filterCategory" class="filter-select" style="padding: 8px 15px; border-radius: 10px; border: 2px solid var(--btn-primary); background: white; font-size: 1rem;">
+                        <template x-for="category in categories" :key="category">
+                            <option :value="category" x-text="category.charAt(0).toUpperCase() + category.slice(1)"></option>
+                        </template>
+                    </select>
+                </div>
+                
+                <!-- Loading State -->
+                <div x-show="loading" class="text-center p-3">
+                    <p>⏳ Loading nouns...</p>
+                </div>
+                
+                <!-- Empty State -->
+                <div x-show="!loading && nouns.length === 0" class="text-center p-3">
+                    <p>⚠️ No nouns found. Please check console for errors.</p>
+                </div>
+                
+                <!-- Nouns Grid -->
+                <div class="words-grid" x-show="!loading && filteredNouns.length > 0">
+                    <template x-for="noun in filteredNouns" :key="noun.word">
+                        <div class="word-card" 
+                             @click="selectNoun(noun)"
+                             :class="{ 'selected': currentNoun && currentNoun.word === noun.word }">
+                            <div class="word-emoji" x-text="noun.emoji"></div>
+                            <div class="word-main" x-text="noun.word"></div>
+                            <div class="word-pronunciation" x-text="noun.pronunciation"></div>
+                            <div class="word-definition" x-text="noun.definition"></div>
+                            <button class="btn-audio" @click.stop="playAudio(noun.word)">🔊</button>
+                        </div>
+                    </template>
+                </div>
+                
+                <!-- Detailed Noun View -->
+                <div x-show="currentNoun" class="word-detail-modal" @click="clearSelection()">
+                    <div class="word-detail-content" @click.stop>
+                        <button class="close-btn" @click="clearSelection()">✕</button>
+                        <div class="detail-emoji" x-text="currentNoun?.emoji"></div>
+                        <div class="detail-word" x-text="currentNoun?.word"></div>
+                        <div class="detail-info">
+                            <p class="detail-pronunciation" x-text="'Pronunciation: ' + currentNoun?.pronunciation"></p>
+                            <p class="detail-definition" x-text="'Definition: ' + currentNoun?.definition"></p>
+                            <div class="detail-example">
+                                <strong>Example:</strong>
+                                <p x-text="currentNoun?.example"></p>
+                            </div>
+                            <div class="detail-category">
+                                <strong>Category:</strong>
+                                <span x-text="currentNoun?.category"></span>
+                            </div>
+                            <div class="detail-type" x-show="currentNoun?.type">
+                                <strong>Type:</strong>
+                                <span x-text="currentNoun?.type"></span>
+                            </div>
+                            <button class="btn btn-primary" @click="playAudio(currentNoun?.word)">🔊 Play Word</button>
+                            <button class="btn btn-secondary" @click="playAudio(currentNoun?.example)">🔊 Play Example</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="page-nav">
+            <a href="/lessons/verbs.html">← Previous: Verbs</a> | 
+            <a href="/lessons/adjectives.html">Next: Adjectives →</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 English A1 eBook by BORCELLE. All rights reserved.</p>
+    </footer>
+</body>
+</html>
