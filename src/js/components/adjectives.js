@@ -1,6 +1,6 @@
 // Adjectives Component
 // Manages the display and interaction of adjective words
-// Displays adjectives with definitions, opposites, and audio playback
+// Displays adjectives with opposites, examples, and audio playback
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('adjectivesComponent', () => ({

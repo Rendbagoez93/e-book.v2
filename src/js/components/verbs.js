@@ -1,6 +1,6 @@
 // Verbs Component
 // Manages the display and interaction of verb words
-// Displays verbs with definitions, examples, and audio playback
+// Displays verbs with examples, categories, and audio playback
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('verbsComponent', () => ({

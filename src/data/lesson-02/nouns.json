@@ -3,7 +3,6 @@
     {
       "word": "book",
       "pronunciation": "/bʊk/",
-      "definition": "A set of printed pages bound together",
       "example": "I have a new book to read.",
       "category": "object",
       "emoji": "📚",
@@ -12,7 +11,6 @@
     {
       "word": "table",
       "pronunciation": "/ˈteɪ.bəl/",
-      "definition": "A piece of furniture with a flat top",
       "example": "The book is on the table.",
       "category": "furniture",
       "emoji": "🪑",
@@ -21,7 +19,6 @@
     {
       "word": "chair",
       "pronunciation": "/tʃer/",
-      "definition": "A seat with a back and usually four legs",
       "example": "Please sit on this chair.",
       "category": "furniture",
       "emoji": "💺",
@@ -30,7 +27,6 @@
     {
       "word": "car",
       "pronunciation": "/kɑːr/",
-      "definition": "A vehicle with four wheels powered by an engine",
       "example": "My father drives a red car.",
       "category": "vehicle",
       "emoji": "🚗",
@@ -39,7 +35,6 @@
     {
       "word": "house",
       "pronunciation": "/haʊs/",
-      "definition": "A building where people live",
       "example": "We live in a big house.",
       "category": "place",
       "emoji": "🏠",
@@ -48,7 +43,6 @@
     {
       "word": "school",
       "pronunciation": "/skuːl/",
-      "definition": "A place where children go to learn",
       "example": "I go to school every day.",
       "category": "place",
       "emoji": "🏫",
@@ -57,7 +51,6 @@
     {
       "word": "teacher",
       "pronunciation": "/ˈtiː.tʃər/",
-      "definition": "A person who teaches",
       "example": "My teacher is very kind.",
       "category": "person",
       "emoji": "👨‍🏫",
@@ -66,7 +59,6 @@
     {
       "word": "student",
       "pronunciation": "/ˈstuː.dənt/",
-      "definition": "A person who is learning at a school",
       "example": "She is a good student.",
       "category": "person",
       "emoji": "👨‍🎓",
@@ -75,7 +67,6 @@
     {
       "word": "dog",
       "pronunciation": "/dɔːɡ/",
-      "definition": "A common four-legged animal kept as a pet",
       "example": "I have a brown dog.",
       "category": "animal",
       "emoji": "🐕",
@@ -84,7 +75,6 @@
     {
       "word": "cat",
       "pronunciation": "/kæt/",
-      "definition": "A small furry animal with whiskers",
       "example": "The cat is sleeping.",
       "category": "animal",
       "emoji": "🐈",
@@ -93,7 +83,6 @@
     {
       "word": "water",
       "pronunciation": "/ˈwɔː.tər/",
-      "definition": "Clear liquid that falls as rain",
       "example": "I drink water every day.",
       "category": "liquid",
       "emoji": "💧",
@@ -102,7 +91,6 @@
     {
       "word": "food",
       "pronunciation": "/fuːd/",
-      "definition": "Things that people eat",
       "example": "This food is delicious.",
       "category": "object",
       "emoji": "🍽️",
@@ -111,7 +99,6 @@
     {
       "word": "friend",
       "pronunciation": "/frend/",
-      "definition": "A person you like and enjoy being with",
       "example": "She is my best friend.",
       "category": "person",
       "emoji": "👫",
@@ -120,7 +107,6 @@
     {
       "word": "family",
       "pronunciation": "/ˈfæm.əl.i/",
-      "definition": "A group of people related by blood",
       "example": "I love my family.",
       "category": "person",
       "emoji": "👨‍👩‍👧‍👦",
@@ -129,7 +115,6 @@
     {
       "word": "computer",
       "pronunciation": "/kəmˈpjuː.tər/",
-      "definition": "An electronic device for storing and processing data",
       "example": "I use my computer for homework.",
       "category": "technology",
       "emoji": "💻",
@@ -138,7 +123,6 @@
     {
       "word": "phone",
       "pronunciation": "/foʊn/",
-      "definition": "A device for talking to people far away",
       "example": "My phone is new.",
       "category": "technology",
       "emoji": "📱",
@@ -147,7 +131,6 @@
     {
       "word": "city",
       "pronunciation": "/ˈsɪt.i/",
-      "definition": "A large town",
       "example": "New York is a big city.",
       "category": "place",
       "emoji": "🏙️",
@@ -156,7 +139,6 @@
     {
       "word": "park",
       "pronunciation": "/pɑːrk/",
-      "definition": "A public area with grass and trees",
       "example": "Children play in the park.",
       "category": "place",
       "emoji": "🏞️",
@@ -165,7 +147,6 @@
     {
       "word": "music",
       "pronunciation": "/ˈmjuː.zɪk/",
-      "definition": "Sounds arranged in a pleasant way",
       "example": "I love listening to music.",
       "category": "abstract",
       "emoji": "🎵",
@@ -174,7 +155,6 @@
     {
       "word": "money",
       "pronunciation": "/ˈmʌn.i/",
-      "definition": "Coins or bills used to buy things",
       "example": "I need money to buy food.",
       "category": "object",
       "emoji": "💰",
