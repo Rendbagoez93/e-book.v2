@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 02: Words</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .lesson-card {
+            background: var(--bg-secondary);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-md) 0;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-card);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        
+        .lesson-icon {
+            font-size: 4rem;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .lesson-title {
+            font-size: 2rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .lesson-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .lessons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+    </style>
+</head>
+<body class="page-wrapper">
+    <header>
+        <div class="logo">
+            <span>📚</span>
+            <h1>BORCELLE - Lesson 02</h1>
+        </div>
+        <p>MY EDUCATION | ABOUT | CONTACT</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/lessons/lesson-01.html">Lesson 1: Basic Learning</a></li>
+            <li><a href="/lessons/lesson-02.html">Lesson 2: Words</a></li>
+        </ul>
+    </nav>
+    
+    <main class="container">
+        <div class="content-card">
+            <h1 class="text-center">ENGLISH CLASS<br><span style="color: var(--text-accent);">WORDS & VOCABULARY</span></h1>
+            
+            <p class="text-center mb-3">Master Different Types of Words in English</p>
+            
+            <p class="text-center" style="font-size: 1.2rem; margin: var(--spacing-lg) 0;">
+                Choose a word type to start learning:
+            </p>
+            
+            <div class="lessons-grid">
+                <!-- Verbs Lesson Card -->
+                <a href="/lessons/verbs.html" style="text-decoration: none;">
+                    <div class="lesson-card">
+                        <div class="lesson-icon">🏃</div>
+                        <h2 class="lesson-title">Verbs</h2>
+                        <p class="lesson-description">
+                            Learn 20 common action words and how to use them
+                        </p>
+                    </div>
+                </a>
+                
+                <!-- Nouns Lesson Card -->
+                <a href="/lessons/nouns.html" style="text-decoration: none;">
+                    <div class="lesson-card">
+                        <div class="lesson-icon">📦</div>
+                        <h2 class="lesson-title">Nouns</h2>
+                        <p class="lesson-description">
+                            Discover naming words for people, places, and things
+                        </p>
+                    </div>
+                </a>
+                
+                <!-- Adjectives Lesson Card -->
+                <a href="/lessons/adjectives.html" style="text-decoration: none;">
+                    <div class="lesson-card">
+                        <div class="lesson-icon">🎨</div>
+                        <h2 class="lesson-title">Adjectives</h2>
+                        <p class="lesson-description">
+                            Learn describing words and their opposites
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="page-nav">
+            <a href="/lessons/lesson-01.html">← Previous: Lesson 1</a> | 
+            <p style="display: inline;">Click on any card above to start learning!</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 English A1 eBook by BORCELLE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

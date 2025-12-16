@@ -44,3 +44,43 @@ def get_colors():
         return jsonify(colors), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+# ===========================
+# Lesson 02 Routes
+# ===========================
+
+@lessons_bp.route('/lessons/lesson-02', methods=['GET'])
+def get_lesson_02():
+    """Get all content for lesson 02"""
+    try:
+        content = content_service.get_lesson_content('lesson-02')
+        return jsonify(content), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@lessons_bp.route('/lessons/lesson-02/verbs', methods=['GET'])
+def get_verbs():
+    """Get verbs data"""
+    try:
+        verbs = content_service.get_word_data('lesson-02', 'verbs')
+        return jsonify(verbs), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@lessons_bp.route('/lessons/lesson-02/nouns', methods=['GET'])
+def get_nouns():
+    """Get nouns data"""
+    try:
+        nouns = content_service.get_word_data('lesson-02', 'nouns')
+        return jsonify(nouns), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@lessons_bp.route('/lessons/lesson-02/adjectives', methods=['GET'])
+def get_adjectives():
+    """Get adjectives data"""
+    try:
+        adjectives = content_service.get_word_data('lesson-02', 'adjectives')
+        return jsonify(adjectives), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
