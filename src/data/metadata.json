@@ -2,7 +2,7 @@
   "title": "English A1 eBook",
   "author": "Your Name",
   "version": "1.0",
-  "description": "An interactive eBook for teaching English at level A1, focusing on letters, numbers, and colors.",
+  "description": "An interactive eBook for teaching English at level A1, focusing on letters, numbers, colors, words, and simple sentences.",
   "lessons": [
     {
       "id": "lesson-01",
@@ -13,10 +13,28 @@
         "numbers": "src/data/lesson-01/numbers.json",
         "colors": "src/data/lesson-01/colors.json"
       }
+    },
+    {
+      "id": "lesson-02",
+      "title": "Words and Vocabulary",
+      "description": "This lesson teaches common English words including verbs, nouns, and adjectives.",
+      "content": {
+        "verbs": "src/data/lesson-02/verbs.json",
+        "nouns": "src/data/lesson-02/nouns.json",
+        "adjectives": "src/data/lesson-02/adjectives.json"
+      }
+    },
+    {
+      "id": "lesson-03",
+      "title": "Simple Sentences",
+      "description": "This lesson teaches common English sentences with Bahasa Indonesia translations.",
+      "content": {
+        "sentences": "src/data/lesson-03/sentences.json"
+      }
     }
   ],
   "language": "English",
   "level": "A1",
   "date_created": "2023-10-01",
-  "last_updated": "2023-10-01"
+  "last_updated": "2023-12-16"
 }

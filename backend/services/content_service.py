@@ -45,3 +45,14 @@ class ContentService:
             Dictionary containing the word data
         """
         return self.load_json(f'{lesson_id}/{word_type}.json')
+
+    def get_sentences(self, lesson_id):
+        """Get sentences data for a specific lesson
+        
+        Args:
+            lesson_id: The lesson identifier (e.g., 'lesson-03')
+        
+        Returns:
+            Dictionary containing the sentences data
+        """
+        return self.load_json(f'{lesson_id}/sentences.json')

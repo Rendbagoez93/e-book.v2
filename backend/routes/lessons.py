@@ -84,3 +84,25 @@ def get_adjectives():
         return jsonify(adjectives), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+# ===========================
+# Lesson 03 Routes
+# ===========================
+
+@lessons_bp.route('/lessons/lesson-03', methods=['GET'])
+def get_lesson_03():
+    """Get all content for lesson 03"""
+    try:
+        content = content_service.get_lesson_content('lesson-03')
+        return jsonify(content), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@lessons_bp.route('/lessons/lesson-03/sentences', methods=['GET'])
+def get_sentences():
+    """Get sentences data"""
+    try:
+        sentences = content_service.get_sentences('lesson-03')
+        return jsonify(sentences), 200
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
